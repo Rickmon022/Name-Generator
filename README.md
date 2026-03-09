@@ -9,7 +9,7 @@ Check out the deployed app here: [https://name-generator-ris.streamlit.app/](htt
 
 ### 🛠️ Local Installation
 ```bash
-git clone [https://github.com/yourusername/Name-Generator.git](https://github.com/yourusername/Name-Generator.git)
+git clone [https://github.com/Rickmon022/Name-Generator.git](https://github.com/Rickmon022/Name-Generator.git)
 cd Name-Generator
 pip install -r requirements.txt
 ```
