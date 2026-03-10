@@ -21,8 +21,6 @@ if st.button('Generate'):
     block_size = 3
     names = []
 
-    g = torch.Generator().manual_seed(2147483647)
-
     while len(names) < num_names:
         out = []
         context = [0] * block_size
@@ -38,7 +36,7 @@ if st.button('Generate'):
             h = torch.tanh(emb.view(1,-1) @ W1 + b1)
             logits = h @ W2 + b2
             probs = F.softmax(logits, dim=1)
-            ix = torch.multinomial(probs, num_samples=1, generator=g).item()
+            ix = torch.multinomial(probs, num_samples=1).item()
             context = context[1:] + [ix]
             out.append(ix)
             if ix == 0 or len(out) >= 10:
